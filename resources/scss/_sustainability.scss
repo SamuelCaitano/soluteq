@@ -1,0 +1,45 @@
+.sustainability {
+  position: relative; 
+  font-family: Arial,Helvetica,sans-serif;  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color-dodge;
+  background-color: rgba(204,204,204,.0);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 5em 2em;
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
+
+  @media only screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
+
+  &-container-caitan {
+    // padding: 0 100px; 
+    // overflow: hidden;
+
+    @media only screen and (max-width: 768px) {
+      padding: 20px 16px;
+    }
+
+    h2 {
+      color: white; 
+      text-align: center; 
+      text-transform: uppercase; 
+      font-weight: 900
+    }
+  }
+
+  &-box-caitan {
+    color: white;
+
+    p {
+      text-align: justify;
+      font-weight: 400;
+    }
+  }
+} 

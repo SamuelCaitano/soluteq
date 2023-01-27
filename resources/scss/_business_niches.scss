@@ -1,0 +1,96 @@
+@import "variables";
+
+.business-caitan { 
+
+  .business {
+    &-container-caitan {
+      max-width: 1200px;
+      height: auto;
+      display: flex;
+      width: 100%; 
+      position: relative;
+    }
+
+    &-wrapper-caitan {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 50px 0;
+    }
+  }
+}
+
+.niches {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr;
+  }
+
+  .niche {
+    position: relative;
+    background-color: white;
+    border-radius: $radius-10;
+    overflow: hidden;
+    transition: 0.4s;
+
+    &-img {
+      max-width: 100%;
+      width: 100%;
+      @include border-radius(10px, 10px, 0, 0);
+      display: block;
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover {
+        transform: scale(1.6);
+        transform-origin: center;
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-title {
+      transition: 0.3s;
+      padding: 20px 20px 0px;
+      display: inline-flex;
+      position: relative;
+      color: black;
+      font-weight: 900;
+      font-size: 25px;
+
+      &:before {
+        content: "";
+        background-color: $green-color-caitan;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        position: absolute;
+        top: 30px;
+        right: -5px;
+      }
+    }
+
+    &-description {
+      color: black;
+      font-size: 23px;
+      padding: 12px 20px;
+      overflow: hidden;
+      background-color: white;
+      z-index: 9;
+      position: relative;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+
+      @media only screen and (max-width: 425px) {
+        font-size: 23px;
+      }
+    }
+  }
+}

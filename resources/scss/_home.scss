@@ -1,0 +1,126 @@
+// ===== HOME =====
+.banner-main-caitan {
+  .home-main-caitan {
+    padding: 100px 0;
+	background: #fefefe;
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+    color: #000;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    // font-family: 'Ubuntu', sans-serif;
+
+    .home-container-caitan {
+      width: 100%;
+      display: flex;
+      margin: auto;
+      max-width: 1300px; 
+      // padding: 0 80px; 
+
+      .home-content {
+        margin-left: 5%;
+        .text-2 {
+          font-size: 55px;
+          font-weight: 600;
+          margin-left: 10px;
+          color: white;
+          line-height: normal;
+        }
+
+        .text-3 {
+          font-size: 40px;
+          margin: 5px 0;
+          color: white;
+          line-height: normal;
+
+          span {
+            color: rgb(255, 196, 0);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+.owl-dots{
+  text-align: center;
+  margin-top: -64px;
+  padding: 20px 0;
+  position: relative;
+}
+.owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none!important;
+  border-radius: 50%;
+  /* border: 2px solid blue!important; */
+  background-color: white!important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  /* background: blue!important; */
+  font-size: 72px!important;
+background: -webkit-linear-gradient( left, white)!important;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/* responsive media query start */
+@media (max-width: 1330px){
+	.home-main-caitan .home-container-caitan{
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 991px){
+    .home-container-caitan{
+	    padding: 0 50px;
+	}
+}
+
+@media (max-width: 947px){
+
+  .home-main-caitan .home-content .text-2{
+    font-size: 70px;
+  }
+  .home-main-caitan .home-content .text-3{
+    font-size: 35px;    
+  }
+}
+
+@media (max-width: 500px){
+	.home-container-caitan{
+		padding: 0 23px;
+	}
+	.home-main-caitan .home-content .text-2{
+	    font-size: 50px;
+      font-size: 35px!important;
+    line-height: normal;
+    }
+    .home-main-caitan .home-content .text-3{
+	    font-size: 27px;    
+    }
+}
+
+/* font tilte */
+@media (max-width: 600px){ 
+  .home-main-caitan .home-content .text-2{
+    font-size: 50px; 
+  }
+}
+
+/* font tilte */
+@media (max-width: 400px){ 
+  .home-main-caitan .home-content .text-2{
+    font-size: 35px; 
+  }
+}

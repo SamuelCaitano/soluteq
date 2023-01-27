@@ -1,0 +1,148 @@
+/* ===================================
+    10. concepts Section CSS
+====================================== */
+
+#concepts {
+  background: whitesmoke;
+  padding: 50px 0;
+  overflow: hidden;
+
+  @media screen and (max-width: 424px) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (max-width: 900px) {
+    background: white;
+  }
+}
+
+.concept {
+  text-align: center;
+  margin: 90px 0px;
+
+  @media screen and (max-width: 425px) {
+    margin: 0 0 125px 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.concept-desc-left .member-info {
+  left: 130px;
+  @media screen and (max-width: 900px) {
+    order: 2;
+    left: 0px !important;
+  }
+}
+
+.concept-desc-left img {
+  @media screen and (max-width: 900px) {
+    order: 1;
+  }
+}
+
+.member-mobile-m-0 {
+  @media screen and (max-width: 425px) {
+    margin: 0 !important;
+  }
+}
+
+.concept img {
+  display: inline-block;
+  vertical-align: middle;
+  // max-width: 700px;
+  border-radius: $radius-10;
+
+  @media screen and (max-width: 900px) {
+    padding: 0 0.5em;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.concept-content {
+  margin-bottom: 35px;
+  font-size: 23px;
+
+  // @media screen and (max-width: 320px) {
+  //   font-size: 20px;
+  // }
+}
+
+.member-info {
+  width: 380px;
+  background-color: #fff;
+  padding: 30px 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -130px;
+  text-align: left;
+  position: relative;
+  z-index: 31;
+  border-radius: $radius-10; 
+
+  @media screen and (max-width: 425px) {
+    padding: 38px;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.member-right {
+  margin-left: auto;
+}
+
+.concept-icon {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.concept-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  line-height: 150%;
+  margin-bottom: 35px;
+  margin-top: -5px;
+  padding: 0;
+}
+
+.btn-know-more {
+  background: #47ea4e;
+  color: white;
+  padding: 25px 50px;
+  position: absolute;
+  bottom: -35px;
+  left: -45px;
+  display: flex;
+  border-radius: $radius-10;
+
+  &:hover {
+    color: white !important;
+  }
+
+  @media screen and (max-width: 425px) {
+    bottom: -50px;
+    left: 50px;
+  }
+
+  @media screen and (max-width: 900px) {
+    left: 55px;
+  }
+}
+
+.member-right .btn-know-more {
+  left: auto;
+  // right: -45px;
+
+  @media screen and (max-width: 425px) {
+    right: auto;
+  }
+}

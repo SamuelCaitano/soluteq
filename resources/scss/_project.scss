@@ -1,0 +1,199 @@
+@import 'variables'; 
+
+.project-caitan {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $gray-color-caitan;
+  background: whitesmoke;
+  // background-image: url('/assets/img/cover/cover.png');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color-dodge;
+  background-color: $gray-color-caitan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em 2em;
+  width: 100%;
+  height: fit-content;
+
+  @media only screen and (max-width: 500px) {
+    padding: 0 1em;
+  } 
+
+  &:before {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(163deg,
+        rgba(31, 29, 43, 1) 21%,
+        rgba(31, 29, 43, 0.3113620448179272) 64%);
+    opacity: 0.4;
+    content: "";
+  }
+
+  .project {
+    &-container-caitan {
+      max-width: 1200px;
+      height: auto;
+      display: flex;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    &-wrapper-caitan {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    &-box-caitan {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 0;
+      flex-grow: 1;
+
+      .project-title-caitan {
+        // font-size: 40px;
+        color: $yellow-color-caitan;
+        font-weight: 900;
+        padding: 10px 0 60px 0;
+        text-align: center;
+        z-index: 11;
+        // margin-bottom: 40px;
+        text-align: center;
+
+        @media only screen and (max-width: 768px) {
+          padding: 10px 0;
+        }
+
+        h2 {
+          font-size: 30px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          color: $yellow-color-caitan;
+          font-weight: bold;
+        }
+
+        h3 {
+          color: $dimgray-color-caitan;
+        }
+      } 
+    }
+  }
+}
+
+// .anim {
+//   animation: bottom 0.8s var(--delay) both;
+// }  
+
+.project-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+  @media screen and (max-width: 980px) { 
+      grid-template-columns: 1fr; 
+  } 
+
+  .project-item {
+    position: relative;
+    // background-color: $dark-medium;
+    background: $white-color-caitan;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-img {
+      max-width: 100%;
+      width: 100%;
+      @include border-radius(20px, 20px, 0, 0);
+      display: block;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    &-customer {
+      transition: 0.3s;
+      padding: 10px 20px 0px;
+      display: inline-flex;
+      position: relative;
+      color: $dark-medium;
+      font-weight: 900;
+      font-size: 25px;
+
+      &:before {
+        content: "";
+        background-color: $green-color-caitan;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        position: absolute;
+        top: 21px;
+        right: -5px;
+      }
+    }
+
+    &-city {
+      color: #0E38EE;
+      font-size: 18px;
+      line-height: 1.4em;
+      padding: 5px 0 20px 20px;
+      overflow: hidden;
+      // background-color: $dark-medium;
+      background: $white-color-caitan;
+      z-index: 9;
+      position: relative;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    &-review { 
+      transition: 0.3s;
+      padding: 20px 20px 0px;
+      display: inline-flex;
+      position: relative; 
+      font-weight: 900;
+      font-size: 25px; 
+      flex-direction: row;
+      position: relative;  
+      color: rgb(253, 188, 0) !important;  
+    }
+
+    &:hover {
+
+      .project-item-img {
+        transform: scale(1.4);
+        transform-origin: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .about-container-business-caitan {
+    flex-wrap: wrap;
+  }
+
+  .about-wrapper-business-caitan {
+    width: 100%;
+  }
+
+  .about-wrapper-business-caitan {
+    margin-left: 0;
+    margin-top: 20px;
+    background-size: cover;
+  }
+}
+

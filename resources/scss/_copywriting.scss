@@ -1,0 +1,177 @@
+@import 'mixin';
+@import 'variables';
+
+.copywriting-caitan {
+  // background-image: url(/assets/img/cover/Sem-título-2.png); 
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  padding: 100px 0 0 0;
+	background: whitesmoke;
+
+  @media only screen and (max-width: 500px){ 
+    height: auto;
+    padding: 60px 0;
+    margin-bottom: 20px;
+  }  
+
+  .copywriting-cover-caitan {
+    position: absolute;
+    overflow-x: hidden;
+    background: rgb(226, 221, 221); 
+    height: 900px;
+    width: 120%;
+    @include rotate(358deg);
+    // z-index: 10;
+    top: -605px;
+    left: -100px;
+  }
+
+  .copywriting-stand-caitan {
+    background-color: transparent;
+    height: 50vh;
+    position: relative;
+    top: -100px;
+
+    @media only screen and (max-width: 500px){ 
+      height: auto;
+      top: 0;
+    } 
+
+    .copywriting-container-caitan {
+      position: relative;
+      margin: 0 auto;
+      background-color: $white-color-caitan;
+      padding: 50px;
+      max-width: 600px;
+      // border-radius: 15px;
+      width: 90%;
+      font-family: Helvetica, sans-serif;
+      @include border-radius(15px,15px,15px,15px);
+      @include box-shadow(1px, 6px, 30px, 0, $gray-color-caitan, false);
+      top: 80px;
+      z-index: 20;
+      line-height: normal;
+
+      @media only screen and (max-width: 500px){  
+        top: 0;
+      }
+
+      h3 {
+        .main-copy-title-caitan {
+          color: $yellow-color-caitan;
+          font-size: 50px;
+          font-weight: 900;
+        }
+
+        .trigger-copy-title-caitan {
+          font-size: 30px;
+          font-weight: 800;
+        }
+
+        .percent-copy-title-caitan {
+          color: $green-color-caitan;
+          font-size: 60px;
+          font-weight: 900;
+        }
+
+        .moral-copy-title-caitan {
+          color: $dimgray-color-caitan;
+          font-weight: 700;
+        }
+      }
+
+      .trigger-quest-copy-caitan {
+        p {
+          padding: 30px 0;
+          font-weight: 900;
+
+          .asking-copy-caitan {
+            text-transform: uppercase;
+            font-weight: 700;
+          }          
+        }
+      }            
+    }
+  }
+} 
+
+.economy_simulator {
+  width: 100%; 
+  max-width: 500px;
+  display: flex; 
+  justify-content: center;
+  text-align: center;
+
+  a {
+    // text-decoration: none;
+    // background: $green-color-caitan;
+    // color: $white-color-caitan;
+    // padding: 20px 10px;
+    // // border-radius: 50px;
+    // @include border-radius(50px,50px,50px,50px);
+    // text-transform: uppercase;
+    // width: 100%;
+    // border: none;
+    // font-size: 30px!important;
+    // font-weight: 900;
+    // cursor: pointer;
+    // text-align: center;
+
+    display: inline-flex;
+    background-image: linear-gradient(147deg, #6aef70 0%, #47ea4e 74%);
+    padding: 15px 35px;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 0px 14px 80px rgb(71 234 78 / 40%);
+    text-decoration: none;
+    font-weight: 500;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+
+    &:hover {
+      background: rgba($green-color-caitan, 0.9);
+    }
+  }
+} 
+
+
+@media only screen and (max-width: 500px) {
+  .copywriting-cover-caitan {
+    visibility: hidden;
+  }
+
+  .copywriting-container-caitan {
+    border: 0 none !important;
+    box-shadow: none !important;
+    padding: 20px !important;
+
+    h3 {
+      .main-copy-title-caitan {
+        font-size: 40px !important;
+      }
+
+      .trigger-copy-title-caitan {
+        font-size: 25px !important;
+      }
+
+      .percent-copy-title-caitan {
+        font-size: 40px !important;
+      }
+
+      .moral-copy-title-caitan {
+        font-size: 16px !important;
+      }
+    }
+
+    .trigger-quest-copy-caitan {
+      p {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+      }
+    }
+
+    
+  } 
+}

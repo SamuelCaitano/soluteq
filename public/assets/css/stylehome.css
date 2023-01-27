@@ -1,0 +1,294 @@
+ 
+
+/* .navbar .logo a{
+	color: #000;
+	font-size: 40px;
+	font-weight: 600;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;	
+} */
+/* .navbar.sticky .logo a span{
+	color: #fff;
+	transition: all 0.3s ease;
+} */
+/* .navbar .menu li{
+	list-style: none;
+	display: inline-block;
+}
+.navbar .menu li a{
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+	margin-left: 20px;
+	transition: color 0,3s ease;
+}
+.navbar .menu li a:hover{
+	color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+	color: #000;
+} */
+
+ 
+
+/*about section*/
+.about, .team, .setup, footer{
+	font-family: 'poppins', sans-serif;
+}
+.about .title::after{
+	content: "who i am";
+}
+.about .about-content{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.about .about-content .left{
+	width: 45%;
+}
+.about .about-content .left img{
+	height: 400px;
+	width: 400px;
+	object-fit: cover;
+	border-radius: 6px;
+}
+.about .about-content .right{
+	width: 55%;
+}
+.about .about-content .right .text{
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.about .about-content .right p{
+  font-size: 20px;
+}
+.about .about-content .right .text span{
+	color: crimson;
+}
+/*team section*/
+.team{
+	color: #fff;
+	background: #111;
+}
+.team .title::before{
+	background: #fff;
+}
+.team .title::after{
+	content: "who's with me";
+	background: #111;
+}
+.team .carousel .card{
+	background: #222;
+	border-radius: 6px;
+	padding: 25px 35px;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+.team .carousel .card:hover{
+	background: crimson;
+}
+.team .carousel .card .box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.team .carousel .card:hover .box{
+	transform: scale(1.05);
+	transition: all 0.3s ease;
+}
+.team .carousel .card .text{
+	font-size: 25px;
+	font-weight: 500px;
+	margin: 10px 0 7px 0;
+}
+.team .carousel .card img{
+	height: 150px;
+	width: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 5px solid crimson;
+}
+.team .carousel .card:hover img{
+	border-color: #fff;
+	transition: all 0.3s ease;
+}
+/*por alguna razon solo se ve en dispositivos moviles el "icono" para cambiar de lado a los jugadores*/
+
+/*setup section*/
+.setup{
+	color: #fff;
+	background: #fefefe;
+}
+.setup .title{
+	color: #000000;
+}
+.setup .title::after{
+	content: "What do I have";
+}
+.setup .carousel .card{
+	background: #222;
+	border-radius: 6px;
+	padding: 25px 35px;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+.setup .carousel .card:hover{
+	background: crimson;
+}
+.setup .carousel .card .box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.setup .carousel .card:hover .box{
+	transform: scale(1.05);
+	transition: all 0.3s ease;
+}
+.setup .carousel .card .text{
+	font-size: 25px;
+	font-weight: 500px;
+	margin: 10px 0 7px 0;
+}
+.setup .carousel .card img{
+	height: 150px;
+	width: 150px;
+	object-fit: cover;
+	border-radius: 20%;
+	border: 5px solid crimson;
+}
+.setup .carousel .card:hover img{
+	border-color: #111;
+	transition: all 0.3s ease;
+}
+footer .redes-sociales{
+	background: #000;
+	padding: 30px 0px;
+}
+footer .redes-sociales span{
+	color: crimson;
+	display: flex;
+	justify-content: center;
+}
+
+footer .redes-sociales .contenedor{
+	display: flex;
+	justify-content: center;
+}
+
+footer .redes-sociales a{
+	text-align: center;
+	width: 50px;
+	padding: 15px 0;
+	border-radius: 3px;
+	font-size: 50px;
+	margin: 0 20px;
+}
+
+footer .redes-sociales .contenedor .instagram{	
+  color: #833ab4;
+  fill: #26d9d9;
+}
+footer .redes-sociales .contenedor .twitter{
+	color: #1da1f2;
+}
+
+footer .redes-sociales .contenedor .twitch{
+	color: #6441a5;
+}
+footer .redes-sociales .contenedor .youtube{
+	color: #ff0000;
+}
+
+footer .redes-sociales .contenedor a:hover{
+border-radius: 100%;
+-webkit-transform: scale(1.25);          
+transform: scale(1.25);  
+-webkit-transition: background-color 0.5s, 
+-webkit-transform 0.5s ease-out;
+}
+
+
+/*menu btn estilo*/
+.menu-btn{
+	color: #fff;
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+}
+
+
+@media (max-width: 947px){
+	.menu-btn{
+	    display: block;
+	    z-index: 999;
+	}
+	.menu-btn i.active:before{
+		content: "\f00d";
+	}
+
+	.navbar .menu{
+		position: fixed;
+		background: #111;
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		text-align: center;
+		padding-top: 80px;
+		transition: all 0.5s ease;
+	}
+	.navbar .menu.active{
+		left: 0;
+	}
+	.navbar .menu li{
+		display: block;
+	}
+	.navbar .menu li a{
+		display: inline-block;
+		margin: 20px 0;
+		font-size: 25px;
+	}
+	
+}
+
+
+
+/* about media query */ 
+ @media (max-width: 1080px){
+ 	.about .about-content .left img{
+ 		height: 350px;
+ 		width: 350px;
+ 	}
+ }
+ @media (max-width: 947px){
+ 	.about .about-content .colum{
+ 		width: 100%;
+ 	}
+ 	.max-width{
+ 		max-width: 800px;
+ 	}
+ 	.about .about-content .left{
+ 		display: flex;
+ 		justify-content: center;
+ 		margin: 0 auto 60px;
+ 	}
+ 	.about .about-content .right{
+ 		flex: 100%;
+ 	}
+ }
+
+
+
+/* footer media query */ 
+@media (max-width: 500px){
+  footer .redes-sociales .contenedor{
+    flex-wrap: wrap;
+    padding: 20px;
+  }  
+}

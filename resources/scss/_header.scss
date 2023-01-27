@@ -1,0 +1,220 @@
+@import "variables";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  @media screen and (max-width: 980px) {
+    height: 70px;
+  }
+
+  .navbar-container { 
+    height: 60px;
+    width: 100%;
+    justify-content: center;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+
+    @media screen and (max-width: 1199.98px) {
+      padding: 0 20px !important;
+    }
+  }
+
+  .box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    position: relative;
+
+    .logo {
+      position: relative;
+
+      img {
+        height: 60px;
+
+        @media screen and (max-width: 980px) {
+          height: 40px;
+        }
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 45px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      @media screen and (max-width: 1199.98px) {
+        background-color: $white-color-caitan;
+        opacity: 1;
+        color: $dark--color;
+        display: block;
+        position: fixed;
+        width: 100%;
+        right: -100%;
+        top: 0px;
+        bottom: 0;
+        padding: 80px 20px;
+        z-index: -1;
+        transition: all 0.4s ease;
+        height: auto !important;
+      }
+
+      ul {
+        position: relative;
+        overflow-y: hidden;
+        list-style: none;
+        margin: 0 !important;
+
+        li .link-header {
+          font-weight: 500;
+          color: white;
+          font-size: var(--fonte-16px);
+          position: relative;
+          text-decoration: none;
+
+          @media screen and (max-width: 1199.98px) { 
+            padding: 0 0 70px 0;
+            color: $dark-medium; 
+          }
+        }
+      }
+
+      .active {
+        color: $primary-color-caitan !important;
+        font-weight: 700!important;
+      }      
+    }
+  }
+}
+
+.navbar-caitan.sticky {
+  background: white;
+}
+
+.navbar-caitan.sticky .link-header {
+  color: $dark-medium;
+  min-height: 60px;
+}
+
+@media (min-width: 1200px) {
+  header .box-header nav ul li .link-header {
+    transition: color 0.2s;
+  }
+
+  header .box-header nav ul li .link-header:hover,
+  header .box-header nav ul li .link-header.ativo {
+    color: #2e79ff;
+  }
+
+  header .box-header nav ul li .link-header:hover::before,
+  header .box-header nav ul li .link-header.ativo::before {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  header .toggle-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  header {
+    .box-header nav { 
+
+      .link-header {
+        font-size: 20px;
+        line-height: 11.66vh;
+        padding: 0 0 0 20px;
+        margin-bottom: 5px;
+
+        &:hover {
+          border-radius: 25px;
+          background-color: $white-hover-caitan;
+        }
+      }
+    }
+
+    .box-header {  
+
+      nav.ativo {
+        opacity: 1;
+        right: 0;
+        height: 99%;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.06);
+        border-top: 7px solid $primary-color-caitan;
+        border-image-slice: 1;
+        border-image-source: $linear-gradient;
+
+        + .toggle-menu span.tm1 {
+          transform: rotate(45deg);
+          background-image: linear-gradient(to right, $primary-color-caitan, $green-color-caitan);
+        }
+
+        + .toggle-menu span.tm2 {
+          margin-top: -2px;
+          transform: rotate(-45deg);
+          background-image: linear-gradient(to left, $primary-color-caitan, $green-color-caitan);
+        }
+
+        + .toggle-menu span.tm3 {
+          display: none;
+        }
+      }
+
+      .toggle-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 42px;
+        height: 32px;
+        z-index: 9999;
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        background-color: rgba($color: $white-color-caitan, $alpha: 0.5);
+
+        &:hover {
+          background-color: $white-hover-caitan;
+        }
+
+        span {
+          display: block;
+          width: 26px;
+          height: 3px;
+          border-radius: 5px;
+          background-color: $dark--color;
+          transition: all 0.4s ease;
+        }
+
+        span + span {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}

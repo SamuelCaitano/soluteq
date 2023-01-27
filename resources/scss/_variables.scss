@@ -1,0 +1,45 @@
+// colors
+$primary-color-caitan: #0d6efd;
+$orange-color-caitan: #ff6900;
+$yellow-color-caitan: #fcb900; 
+$green-color-caitan: #47ea4e;
+$green-light-color-caitan: #13e413;
+$white-color-caitan: #fff;
+$white-hover-caitan:#f1f1ed;  
+$dimgray-color-caitan: #696969;
+// $yellow-color-caitan: #fbcf0c;
+
+
+$gray-color-caitan: #cccc;
+$linear-gradient: linear-gradient(to left, $primary-color-caitan, $green-color-caitan, $yellow-color-caitan);
+
+// dark
+$dark--color: black; 
+$dark-medium: #222;
+$dark-little: #4b4848;
+$secondary: #808080;
+
+
+// font
+$font-main: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+$espaco-padrao: clamp(70px, 7.81vw, 150px);
+$font-12px: 0.75rem;
+$font-14px: 0.875rem;
+$font-16px: 1rem;
+$font-18px: 1.125rem;
+$font-20px: 1.25rem;
+$font-22px: 1.375rem;
+$font-23px: 1.4375em;
+$font-25px: 1.5625em;
+$font-24px: 1.5rem;
+$font-32px: 2rem;
+$font-35px: 2.1875rem;
+$font-40px: 2.5rem;
+$font-44px: 2.75rem;
+$font-48px: 3rem;
+$font-62px: 3.875rem;
+$font-64px: 4rem;
+$font-80px: 5rem;
+
+// Border
+$radius-10: 10px;

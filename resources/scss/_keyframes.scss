@@ -1,0 +1,92 @@
+// gradient animation
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.up-and-down {
+  animation: up-and-down 1.5s ease-in-out infinite;
+
+  &:hover {
+    animation: 1.5s none;
+  }
+}
+
+.a-pulse {
+  --animdur: 1s;
+  --animn: pulse;
+  will-change: transform;
+
+  &:hover {
+    animation: none;
+  }
+}
+
+.fadeInRight {
+  animation: fadeInRight  1.5s cubic-bezier(.17, .67, .49, 1.02);
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+
+[data-animation] {
+  animation: var(--animn, none) var(--animdur, 0s) var(--animtf, linear) var(--animdel, 0s) var(--animic, infinite) var(--animdir, alternate) var(--animfm, none) var(--animps, running);
+}
+
+@keyframes up-and-down {
+
+  0%,
+  100% {
+    transform: translateY(-15%)
+  }
+
+  50% {
+    transform: translateY(15%)
+  }
+}
+
+
+// @keyframes fadeInRight {
+//   from {
+//     opacity: 0;
+//     transform: translateX(300px);
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

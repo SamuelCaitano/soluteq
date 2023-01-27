@@ -1,0 +1,366 @@
+// ===== Title =====
+.main-contact-caitan {
+  padding: 80px 0px;
+  text-align: center;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: whitesmoke;
+
+  .contact-wrapper-caitan {
+    background-color: #FDC300;
+
+    h2 {
+      font-size: 35px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: inline-block;
+      text-align: center;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          font-size: 15px;
+          color: #fff !important;
+          font-weight: 400;
+          display: inline-block;
+
+          a {
+            &:hover {
+              color: #FDC300;
+            }
+          }
+        }
+
+        li.active {
+          padding-left: .5rem;
+        }
+
+        .breadcrumb-item {
+          display: inline-block;
+          padding-right: 0.5rem;
+          color: #ffffff;
+          content: "/";
+
+          &::before {
+            display: inline-block;
+            padding-right: 0.5rem;
+            color: #ffffff;
+            content: "/";
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===== Localization =====
+.section-localization-caitan {
+  display: block;
+  padding: 50px 0px;
+
+  .main-heading-block-caitan {
+    margin-bottom: 40px;
+    text-align: center;
+
+    .main-heading-caitan {
+      color: #000;
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+  }
+
+  .frame-cards-contact-caitan {
+    display: flex !important;
+    margin: 20px 0 0 0;
+    // gap: 10px;
+    width: 100%;
+    padding: 20px;
+
+  }
+
+  .card-contact-caitan {
+    margin-bottom: 30px;
+    background-color: #FDC300;
+    padding: 10px 5px;
+    border-radius: $radius-10;
+
+    .contact-block-wrapper-caitan {
+      // background: #141414;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .icon-box-caitan {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FDC300;
+        color: #fff;
+        font-size: 40px;
+        border-radius: 50%;
+      }
+
+      .contact-box-heading-caitan {
+        font-size: 18px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 20px 0px 10px 0px;
+      }
+
+      .contact-box-info-caitan {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Form contact
+.contact-form-wrapper { 
+
+  .form-inner {
+    margin: 30px 0px;
+    box-shadow: 5px 6px 20px 0 gray;
+    border-radius: $radius-10;
+    background: white;
+
+    .form-contact-caitan {
+      height: 40px;
+      width: 100%;
+      position: relative;
+      background: gray;
+      display: flex;
+      align-items: center;
+      border-radius: 10px 10px 0 0;
+
+      .form-contact-title-caitan {
+        text-indent: 20px;
+        margin-bottom: 0;
+        color: white;
+        font-size: 20px;
+      }
+    }
+
+    form {
+      padding: 30px 20px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .main-heading-block-caitan {
+    display: grid;
+
+    .main-heading-caitan {
+      text-align: center;
+      display: table-row;
+    }
+  }
+}
+
+.learn-more-btn {
+  background: $primary-color-caitan;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  float: left;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.learn-more-btn:hover {
+  background: rgba($primary-color-caitan, 0.9);
+}
+
+.floating-form {
+  // width: 320px;
+
+  .floating-label {
+    position: relative;
+    margin-bottom: 20px;
+
+    .floating-input, 
+    .floating-select {
+      font-size: 14px;
+      padding: 4px 4px;
+      display: block;
+      width: 100%;
+      height: 30px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid;
+      border-image-slice: 1;
+      border-image-source: $linear-gradient;
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid $primary-color-caitan;
+      }
+    }
+
+    .floating-textarea {
+      min-height: 120px;
+      max-height: 260px;
+      overflow: hidden;
+      overflow-x: hidden;
+    }
+
+    .highlight {
+      position: absolute;
+      height: 50%;
+      width: 100%;
+      top: 15%;
+      left: 0;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    label {
+      color: rgb(85, 85, 85);
+      font-size: 14px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 5px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+  }
+}
+
+.floating-input:focus~label,
+.floating-input:not(:placeholder-shown)~label {
+  top: -18px;
+  font-size: 14px;
+  color: $primary-color-caitan;
+}
+
+.floating-select:focus~label,
+.floating-select:not([value=""]):valid~label {
+  top: -18px;
+  font-size: 14px;
+  color: $primary-color-caitan;
+}
+
+/* active state */
+.floating-input:focus~.bar:before,
+.floating-input:focus~.bar:after,
+.floating-select:focus~.bar:before,
+.floating-select:focus~.bar:after {
+  width: 50%;
+}
+
+/* active state */
+.floating-input:focus~.highlight,
+.floating-select:focus~.highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* animation */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+/****  floating-Lable style end ****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***   Body style start  ***/
+
+
+/***   daniel - Fork me friend - style   ***/
+.floating-credit {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 13px;
+  font-family: arial, sans-serif;
+}
+
+.floating-credit a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.floating-credit a:hover {
+  border-bottom: 1px dotted #f8f8f8;
+}
+
+.floating-heading {
+  position: fixed;
+  color: #aaa;
+  font-size: 20px;
+  font-family: arial, sans-serif;
+}
+
+/***  daniel - Fork me friend - style  ***/

@@ -1,0 +1,16 @@
+.customers {
+  text-align: center;
+  background-color: whitesmoke;
+ 
+
+  &-title-caitan {
+    
+  }
+ 
+
+  &-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

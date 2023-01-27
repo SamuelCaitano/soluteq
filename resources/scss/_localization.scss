@@ -1,0 +1,118 @@
+.local-caitan {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4em 2em;
+  width: 100%;
+  height: fit-content;
+  background-color: #f5f5f5;
+
+  @media only screen and (max-width: 425px) {
+    padding: 2em 0.5em;
+  }
+
+  @media only screen and (max-width: 900px) {
+    background-image: url(/assets/img/cover-world.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .local {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    &-container-caitan {
+      max-width: 1200px;
+      height: auto;
+      display: flex;
+      width: 100%;
+      position: relative;
+    }
+
+    &-wrapper-caitan {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    &-box-caitan {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      // === CSS MAPS === //
+      .maps-caitan {
+        flex-wrap: wrap;
+
+        .maps-container-caitan {
+          display: flex;
+          margin-left: 0;
+          margin-top: 20px;
+          background-size: cover;
+          width: 100%;
+          border: 1px solid #c1bfbf;
+          padding: 0;
+          border-radius: 10px;
+
+          .gmap_iframe {
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    .address {
+      position: relative;
+      background-color: $dark-medium;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+      height: auto;
+      background: $primary-color-caitan;
+      // background: linear-gradient(153deg, rgba(2, 0, 36, 1) 0%, rgba(45, 49, 204, 1) 67%, rgba(0, 212, 255, 1) 100%);
+      text-align: center;
+      display: inline;
+      padding: 50px 20px;
+      color: white;
+      text-transform: none;
+      text-decoration: none;
+
+      @media only screen and (max-width: 425px) {
+        padding: 20px;
+      }
+
+      &-title {
+        // transition: 0.3s;
+        padding: 20px 20px 0px;
+        display: inline-flex;
+        position: relative;
+        font-weight: 900;
+        font-size: 25px;
+      }
+
+      i {
+        font-size: 50px;
+      }
+
+      &-info {
+        font-size: 16px;
+      }
+
+      &:hover {
+        background: #498df1;
+        color: white !important;
+      }
+    }
+
+    // === RESPONSIVE LOCALIZATION === //
+    @media screen and (max-width: 850px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
